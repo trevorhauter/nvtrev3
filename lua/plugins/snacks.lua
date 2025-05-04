@@ -5,8 +5,22 @@ return {
     ---@type snacks.Config
     opts = {
         bigfile = { enabled = true },
-        dashboard = { enabled = true },
-        explorer = { enabled = true },
+        dashboard = {
+            enabled = true,
+            sections = {
+                { section = "header" },
+                { section = "keys", gap = 1, padding = 1 },
+                { section = "startup" },
+                {
+                    section = "terminal",
+                    cmd = "pokemon-colorscripts -r --no-title; sleep .1",
+                    random = 10,
+                    pane = 2,
+                    indent = 4,
+                    height = 30,
+                },
+            },
+        },
         input = { enabled = true },
         notifier = {
             enabled = true,
@@ -60,13 +74,6 @@ return {
                 Snacks.picker.notifications()
             end,
             desc = "Notification History",
-        },
-        {
-            "<leader>e",
-            function()
-                Snacks.explorer()
-            end,
-            desc = "File Explorer",
         },
         -- find
         {
@@ -501,8 +508,19 @@ return {
         vim.cmd.colorscheme("gruvbox-material")
 
         -- Then override snacks.nvim header
+        local dashboard_blue = "#89B4FA"
         vim.api.nvim_set_hl(0, "SnacksDashboardHeader", {
-            fg = "#89B4FA",
+            fg = dashboard_blue,
+            bold = true,
+        })
+
+        vim.api.nvim_set_hl(0, "SnacksDashboardDesc", {
+            fg = dashboard_blue,
+            bold = true,
+        })
+
+        vim.api.nvim_set_hl(0, "SnacksDashboardIcon", {
+            fg = dashboard_blue,
             bold = true,
         })
 
