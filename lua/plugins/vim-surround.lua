@@ -14,4 +14,7 @@ return {
         vim.keymap.set("x", "rs", "<Plug>VSurround")
         vim.keymap.set("x", "rS", "<Plug>VgSurround")
     end,
+    init = function()
+        vim.g.surround_no_mappings = 1
+    end,
 }
