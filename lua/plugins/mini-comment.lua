@@ -1,1 +1,1 @@
-return { 'echasnovski/mini.comment', version = '*' },
+return { "echasnovski/mini.comment", version = "*" }
