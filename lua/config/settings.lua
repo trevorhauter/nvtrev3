@@ -1,27 +1,10 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
--- TODO: Should this live in the nvim tree config?
--- == BEGIN NVIM-TREE CONFIG ==
--- disable netrw at the very start of your init.lua
+-- Disable netrw since I use other things
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- == END NVIM-TREE CONFIG ==
-
--- SPECIAL KEY MAPS
--- Add these remaps only when the buffer is modifiable
-vim.api.nvim_create_autocmd("BufEnter", {
-    pattern = "*", -- You can specify a specific file type or pattern here
-    callback = function()
-        if vim.bo.modifiable then
-            vim.api.nvim_buf_set_keymap(0, "v", "<C-j>", ":m '>+1<CR>gv=gv", {})
-            vim.api.nvim_buf_set_keymap(0, "v", "<C-k>", ":m '<-2<CR>gv=gv", {})
-        end
-    end,
-})
-
--- END SPECIAL KEY MAPS
 
 --CODE FOLDING TIMEEEE
 vim.o.foldmethod = "expr"
