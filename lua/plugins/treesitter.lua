@@ -24,6 +24,7 @@ return {
                 "query",
                 "toml",
                 "typescript",
+                "regex",
                 "vim",
                 "vimdoc",
                 "yaml",
