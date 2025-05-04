@@ -453,21 +453,6 @@ return {
             desc = "Rename File",
         },
         {
-            "<leader>gB",
-            function()
-                Snacks.gitbrowse()
-            end,
-            desc = "Git Browse",
-            mode = { "n", "v" },
-        },
-        {
-            "<leader>gg",
-            function()
-                Snacks.lazygit()
-            end,
-            desc = "Lazygit",
-        },
-        {
             "<leader>un",
             function()
                 Snacks.notifier.hide()
