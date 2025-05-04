@@ -5,6 +5,8 @@ vim.g.maplocalleader = "\\"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- load auto commands
+require("config.auto-commands")
 
 --CODE FOLDING TIMEEEE
 vim.o.foldmethod = "expr"

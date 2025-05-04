@@ -22,7 +22,6 @@ vim.api.nvim_set_keymap(
     { noremap = true, silent = true }
 )
 
-
 -- AUTO FORMATTING STUFF
 -- Pretty sure this is a garbage way to do this but w/e for now
 vim.api.nvim_create_augroup("AutoFormat", {})
