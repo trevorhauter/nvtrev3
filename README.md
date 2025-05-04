@@ -2,6 +2,8 @@
 A better way to code
 
 ## Links
+- [Keybinds](https://github.com/trevorhauter/nvtrev3/wiki/Keybinds)
+- [Quickstart](https://github.com/trevorhauter/nvtrev3/wiki/Quickstart)
 
 ## Plugins
 
