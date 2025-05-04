@@ -13,9 +13,10 @@ return {
                 { section = "startup" },
                 {
                     section = "terminal",
-                    cmd = "pokemon-colorscripts -r --no-title",
+                    cmd = "pokemon-colorscripts -r 1 --no-title",
                     pane = 2,
                     height = 30,
+                    random = 1000,
                 },
             },
         },
