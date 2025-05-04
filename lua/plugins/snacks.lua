@@ -116,6 +116,15 @@ return {
     }
   },
   init = function()
+    vim.cmd.colorscheme('gruvbox-material')
+
+    -- Then override snacks.nvim header
+    vim.api.nvim_set_hl(0, 'SnacksDashboardHeader', {
+        fg = '#89B4FA',
+        bold = true
+    })
+
+
     vim.api.nvim_create_autocmd("User", {
       pattern = "VeryLazy",
       callback = function()
