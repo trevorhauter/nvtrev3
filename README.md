@@ -40,6 +40,7 @@ A better way to code
 - [snacks.quickfile](https://github.com/folke/snacks.nvim/blob/main/docs/quickfile.md) - Render text files as quickly as possible before plugins
 - [snacks.scope](https://github.com/folke/snacks.nvim/blob/main/docs/scope.md) - Scope detection, text objects and jumping based on treesitter or indent
 - [snacks.words](https://github.com/folke/snacks.nvim/blob/main/docs/words.md) - Auto-show LSP references and quickly navigate between them
+- [snacks.zen](https://github.com/folke/snacks.nvim/blob/main/docs/zen.md) - Distraction free coding
 
 ### Syntax highlighting
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Syntax highlighting for all languages
