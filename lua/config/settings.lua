@@ -22,6 +22,7 @@ vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decr
 vim.o.foldlevelstart = 99
 -- END CODE FOLDING
 
+vim.diagnostic.config({ virtual_text = true }) -- lsp warnings
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 4

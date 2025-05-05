@@ -1,4 +1,6 @@
 local lspconfig = require("lspconfig")
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 require("mason").setup({})
 require("mason-lspconfig").setup({
     ensure_installed = {
@@ -23,7 +25,7 @@ require("mason-lspconfig").setup({
         -- for python
         "pyright",
 
-        "solargraph",
+        -- "solargraph",
         -- for javascript and typescript
         "ts_ls",
     },
@@ -31,13 +33,15 @@ require("mason-lspconfig").setup({
         -- this first function is the "default handler"
         -- it applies to every language server without a "custom handler"
         function(server_name)
-            require("lspconfig")[server_name].setup({})
+            require("lspconfig")[server_name].setup({
+                capabilities = capabilities,
+            })
         end,
 
         --cssls
         cssls = function()
             --Enable (broadcasting) snippet capability for completion
-            local capabilities = vim.lsp.protocol.make_client_capabilities()
+            capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities.textDocument.completion.completionItem.snippetSupport = true
 
             lspconfig.cssls.setup({
@@ -62,7 +66,7 @@ require("mason-lspconfig").setup({
         --NOTE THIS ONLY WORKS FOR regular html... not django templates!
         html = function()
             --Enable (broadcasting) snippet capability for completion
-            local capabilities = vim.lsp.protocol.make_client_capabilities()
+            capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities.textDocument.completion.completionItem.snippetSupport = true
 
             lspconfig.html.setup({
@@ -86,7 +90,25 @@ require("mason-lspconfig").setup({
         --pyright
         pyright = function()
             -- this should just be set up in a project specific pyrightconfig.json file
-            lspconfig.pyright.setup({})
+            lspconfig.pyright.setup({
+                capabilities = capabilities,
+            })
         end,
     },
+})
+
+-- set up auto completion
+local cmp = require("cmp")
+
+cmp.setup({
+    sources = {
+        { name = "nvim_lsp" },
+    },
+    snippet = {
+        expand = function(args)
+            -- You need Neovim v0.10 to use vim.snippet
+            vim.snippet.expand(args.body)
+        end,
+    },
+    mapping = cmp.mapping.preset.insert({}),
 })

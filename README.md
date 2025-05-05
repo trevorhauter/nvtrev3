@@ -20,6 +20,8 @@ A better way to code
 - [mason](https://github.com/williamboman/mason.nvim") - Automatically handles language server installations
 - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim) - Configure LSP
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - More LSP configuration
+- [nvim-cmp-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) - Auto completion engine
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - More autocomplete
 
 ### Navigation
 - [harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Keep track & navigate back to select group of files
