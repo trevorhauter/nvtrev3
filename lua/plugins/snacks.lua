@@ -20,7 +20,6 @@ return {
                 },
             },
         },
-        explorer = { enabled = true },
         input = { enabled = true },
         notifier = {
             enabled = true,
@@ -65,20 +64,6 @@ return {
                 Snacks.picker.command_history()
             end,
             desc = "Command History",
-        },
-        {
-            "<leader>n",
-            function()
-                Snacks.picker.notifications()
-            end,
-            desc = "Notification History",
-        },
-        {
-            "<leader>e",
-            function()
-                Snacks.explorer()
-            end,
-            desc = "File Explorer",
         },
         -- find
         {

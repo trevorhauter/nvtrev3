@@ -28,7 +28,7 @@ A better way to code
 - [leap](https://github.com/ggandor/leap.nvim) - Leap around files at lightning speed
 - [neoscroll](https://github.com/karb94/neoscroll.nvim) - Smooth scrolling
 - [quick-scope](https://github.com/unblevable/quick-scope) - Unique character highlighter
-- [snacks.explorer](https://github.com/folke/snacks.nvim/blob/main/docs/explorer.md) - File explorer
+- [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) - File explorer
 - [snacks.picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md) - Fuzzy file finder
 
 ### Random QoL
