@@ -8,6 +8,7 @@ return {
             ensure_installed = {
                 "bash",
                 "c",
+                "c++",
                 "c_sharp",
                 "cmake",
                 "css",
@@ -22,9 +23,9 @@ return {
                 "lua",
                 "python",
                 "query",
+                "regex",
                 "toml",
                 "typescript",
-                "regex",
                 "vim",
                 "vimdoc",
                 "yaml",
