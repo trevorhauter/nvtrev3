@@ -8,7 +8,7 @@ return {
             ensure_installed = {
                 "bash",
                 "c",
-                "c++",
+                "cpp",
                 "c_sharp",
                 "cmake",
                 "css",
