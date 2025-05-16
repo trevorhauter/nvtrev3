@@ -45,7 +45,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 })
 
 vim.api.nvim_create_autocmd("BufWritePost", {
-    pattern = "*.c",
+    pattern = { "*.c", "*.cpp" },
     group = "AutoFormat",
     callback = function()
         vim.cmd("silent! !clang-format -i %")
