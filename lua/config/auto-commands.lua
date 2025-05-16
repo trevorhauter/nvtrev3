@@ -54,7 +54,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 })
 
 vim.api.nvim_create_autocmd("BufWritePost", {
-    pattern = { "*.js", "*.ts", "*.tsx", "*.jsx" },
+    pattern = { "*.js", "*.mjs", "*.ts", "*.tsx", "*.jsx" },
     group = "AutoFormat",
     callback = function()
         vim.cmd("silent! !npx eslint % --fix")
