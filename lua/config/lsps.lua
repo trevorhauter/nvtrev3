@@ -1,9 +1,4 @@
 local lspconfig = require("lspconfig")
-require("cmp").setup({
-    sources = {
-        { name = "nvim_lsp" },
-    },
-})
 
 -- auto install & enable lsps with mason & mason-lspconfig
 require("mason").setup({})
@@ -36,7 +31,7 @@ vim.lsp.config.lua_ls = {
 -- set up auto completion for each server
 
 -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 lspconfig.clangd.setup({
     capabilities = capabilities,
