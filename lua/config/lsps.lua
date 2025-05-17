@@ -1,101 +1,71 @@
 local lspconfig = require("lspconfig")
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-require("mason").setup({})
-require("mason-lspconfig").setup({
-    ensure_installed = {
-        -- For CSS, duh!
-        "cssls",
-
-        "clangd",
-
-        -- Makes web development faster... mostly html tag creation stuff
-        "emmet_language_server",
-
-        -- For js, react, and ts linting.
-        -- NOTE: REQUIRES ESLINT FILE IN ROOT DIR OF PROJECT
-        "eslint",
-
-        -- for html (NOT DJANGO TEMPLATES)
-        "html",
-
-        -- for lua!
-        "lua_ls",
-
-        -- for python
-        "pyright",
-
-        -- "solargraph",
-        -- for javascript and typescript
-        "ts_ls",
-    },
-    handlers = {
-        -- this first function is the "default handler"
-        -- it applies to every language server without a "custom handler"
-        function(server_name)
-            require("lspconfig")[server_name].setup({
-                capabilities = capabilities,
-            })
-        end,
-
-        --cssls
-        cssls = function()
-            --Enable (broadcasting) snippet capability for completion
-            capabilities = vim.lsp.protocol.make_client_capabilities()
-            capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-            lspconfig.cssls.setup({
-                capabilities = capabilities,
-            })
-        end,
-
-        --html
-        --NOTE THIS ONLY WORKS FOR regular html... not django templates!
-        html = function()
-            --Enable (broadcasting) snippet capability for completion
-            capabilities = vim.lsp.protocol.make_client_capabilities()
-            capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-            lspconfig.html.setup({
-                capabilities = capabilities,
-            })
-        end,
-
-        lua_ls = function()
-            lspconfig.lua_ls.setup({
-                settings = {
-                    Lua = {
-                        diagnostics = {
-                            -- Get the language server to recognize the `vim` global
-                            globals = { "vim" },
-                        },
-                    },
-                },
-            })
-        end,
-
-        --pyright
-        pyright = function()
-            -- this should just be set up in a project specific pyrightconfig.json file
-            lspconfig.pyright.setup({
-                capabilities = capabilities,
-            })
-        end,
-    },
-})
-
--- set up auto completion
-local cmp = require("cmp")
-
-cmp.setup({
+require("cmp").setup({
     sources = {
         { name = "nvim_lsp" },
     },
-    snippet = {
-        expand = function(args)
-            -- You need Neovim v0.10 to use vim.snippet
-            vim.snippet.expand(args.body)
-        end,
+})
+
+-- auto install & enable lsps with mason & mason-lspconfig
+require("mason").setup({})
+require("mason-lspconfig").setup({
+    ensure_installed = {
+        "clangd",
+        "cssls",
+        "emmet_language_server",
+        "eslint",
+        "html",
+        "lua_ls",
+        "pyright",
+        "ts_ls",
     },
-    mapping = cmp.mapping.preset.insert({}),
+    automatic_enable = false,
+})
+
+-- Do any extra configuration to lsps here
+vim.lsp.config.lua_ls = {
+    settings = {
+        Lua = {
+            diagnostics = {
+                -- Get the language server to recognize the `vim` global
+                globals = { "vim" },
+            },
+        },
+    },
+}
+
+-- set up auto completion for each server
+
+-- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+lspconfig.clangd.setup({
+    capabilities = capabilities,
+})
+
+lspconfig.cssls.setup({
+    capabilities = capabilities,
+})
+
+lspconfig.emmet_language_server.setup({
+    capabilities = capabilities,
+})
+
+lspconfig.eslint.setup({
+    capabilities = capabilities,
+})
+
+lspconfig.html.setup({
+    capabilities = capabilities,
+})
+
+lspconfig.lua_ls.setup({
+    capabilities = capabilities,
+})
+
+lspconfig.pyright.setup({
+    capabilities = capabilities,
+})
+
+lspconfig.ts_ls.setup({
+    capabilities = capabilities,
 })
