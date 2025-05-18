@@ -27,7 +27,7 @@ A better way to code
 - [harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Keep track & navigate back to select group of files
 - [leap](https://github.com/ggandor/leap.nvim) - Leap around files at lightning speed
 - [neoscroll](https://github.com/karb94/neoscroll.nvim) - Smooth scrolling
-- [quick-scope](https://github.com/unblevable/quick-scope) - Unique character highlighter
+- [eyeliner.nvim](https://github.com/jinh0/eyeliner.nvim) - Unique character highlighter
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) - File explorer
 - [snacks.picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md) - Fuzzy file finder
 
