@@ -6,7 +6,7 @@ return {
     opts = {
         bigfile = { enabled = true },
         dashboard = {
-            enabled = false,
+            enabled = true,
             sections = {
                 { section = "header" },
                 { section = "keys", gap = 1, padding = 1 },
