@@ -16,19 +16,7 @@ require("mason-lspconfig").setup({
     automatic_enable = false,
 })
 
--- Do any extra configuration to lsps here
-vim.lsp.config.lua_ls = {
-    settings = {
-        Lua = {
-            diagnostics = {
-                -- Get the language server to recognize the `vim` global
-                globals = { "vim" },
-            },
-        },
-    },
-}
-
--- set up auto completion for each server
+-- set up auto completion for each server (along with any other extra configuration)
 
 -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
 local capabilities = require("blink.cmp").get_lsp_capabilities()
@@ -55,6 +43,18 @@ lspconfig.html.setup({
 
 lspconfig.lua_ls.setup({
     capabilities = capabilities,
+    settings = {
+
+        Lua = {
+
+            diagnostics = {
+
+                -- Get the language server to recognize the `vim` global
+
+                globals = { "vim" },
+            },
+        },
+    },
 })
 
 lspconfig.pyright.setup({
