@@ -31,6 +31,9 @@ A better way to code
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) - File explorer
 - [snacks.picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md) - Fuzzy file finder
 
+### Organization
+- [neorg](https://github.com/nvim-neorg/neorg) - Note taking and Organization
+
 ### Random QoL
 - [mini.comment](https://github.com/echasnovski/mini.comment) - Commenting made easy
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs) - Have those pairs automatically close themselves
