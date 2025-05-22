@@ -25,7 +25,7 @@ A better way to code
 
 ### Navigation
 - [eyeliner.nvim](https://github.com/jinh0/eyeliner.nvim) - Unique character highlighter
-- [harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Keep track & navigate back to select group of files
+- [dartboard](https://github.com/markgandolfo/dartboard.nvim) - Keep track and navigate back to common files
 - [leap](https://github.com/ggandor/leap.nvim) - Leap around files at lightning speed
 - [neoscroll](https://github.com/karb94/neoscroll.nvim) - Smooth scrolling
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) - File explorer
