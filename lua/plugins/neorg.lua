@@ -7,6 +7,13 @@ return {
             load = {
                 ["core.defaults"] = {},
                 ["core.concealer"] = {},
+                ["core.esupports.hop"] = {
+                    config = {
+                        lookahead = true,
+                        fuzzing_threshold = 0.5,
+                        external_filetypes = { "pdf", "jpg" },
+                    },
+                },
                 ["core.dirman"] = {
                     config = {
                         workspaces = {
