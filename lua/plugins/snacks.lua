@@ -25,7 +25,17 @@ return {
             enabled = true,
             timeout = 3000,
         },
-        picker = { enabled = true },
+        picker = {
+            enabled = true,
+            win = {
+                input = {
+                    keys = {
+                        ["<S-Down>"] = { "history_forward", mode = { "i", "n" } },
+                        ["<S-Up>"] = { "history_back", mode = { "i", "n" } },
+                    },
+                },
+            },
+        },
         quickfile = { enabled = true },
         scope = { enabled = true },
         styles = {
