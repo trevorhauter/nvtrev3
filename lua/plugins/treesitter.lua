@@ -8,9 +8,9 @@ return {
             ensure_installed = {
                 "bash",
                 "c",
-                "cpp",
                 "c_sharp",
                 "cmake",
+                "cpp",
                 "css",
                 "dockerfile",
                 "gitcommit",
@@ -24,6 +24,7 @@ return {
                 "python",
                 "query",
                 "regex",
+                "toml",
                 "toml",
                 "typescript",
                 "vim",
