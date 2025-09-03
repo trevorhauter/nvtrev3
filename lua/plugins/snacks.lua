@@ -45,13 +45,16 @@ return {
         },
         words = { enabled = true },
         zen = {
-            width = 140,
+            width = 160,
             toggles = {
                 dim = false,
                 git_signs = true,
                 mini_diff_signs = true,
                 diagnostics = true,
                 inlay_hints = true,
+            },
+            win = {
+                width = 160,
             },
         },
     },
