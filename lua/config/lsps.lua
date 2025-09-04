@@ -21,6 +21,12 @@ require("mason-lspconfig").setup({
 -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 
+require("java").setup()
+
+lspconfig.jdtls.setup({
+    capabilities = capabilities,
+})
+
 lspconfig.clangd.setup({
     capabilities = capabilities,
 })
