@@ -35,6 +35,26 @@ return {
                     },
                 },
             },
+            sources = {
+                -- TODO: Maybe work on the formatting or max length of these previews?
+                files = {
+                    on_change = function(picker, item)
+                        vim.schedule(function()
+                            picker.preview.win:set_title(item.file)
+                        end)
+                    end,
+                },
+                grep = {
+                    on_change = function(picker, item)
+                        if item == nil then
+                            return
+                        end
+                        vim.schedule(function()
+                            picker.preview.win:set_title(item.file)
+                        end)
+                    end,
+                },
+            },
         },
         quickfile = { enabled = true },
         scope = { enabled = true },
