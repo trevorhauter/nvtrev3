@@ -4,7 +4,7 @@ return {
         local gitportal = require("gitportal")
 
         gitportal.setup({
-            always_use_commit_hash_in_url = false,
+            always_use_commit_hash_in_url = true,
         })
 
         vim.keymap.set("n", "<leader>gp", gitportal.open_file_in_browser)
