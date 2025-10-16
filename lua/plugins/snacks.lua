@@ -11,13 +11,14 @@ return {
                 { section = "header" },
                 { section = "keys", gap = 1, padding = 1 },
                 { section = "startup" },
-                {
-                    section = "terminal",
-                    cmd = "pokemon-colorscripts -r 1 --no-title",
-                    pane = 2,
-                    height = 30,
-                    random = 1000,
-                },
+                -- Disabled temporarily :( hopefully fixed in https://github.com/folke/snacks.nvim/pull/221 hopefully fixed in https://github.com/folke/snacks.nvim/pull/2214
+                -- {
+                --     section = "terminal",
+                --     cmd = "pokemon-colorscripts -r 1 --no-title",
+                --     pane = 2,
+                --     height = 30,
+                --     random = 1000,
+                -- },
             },
         },
         input = { enabled = true },
