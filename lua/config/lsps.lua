@@ -1,5 +1,3 @@
-local lspconfig = require("lspconfig")
-
 -- auto install & enable lsps with mason & mason-lspconfig
 require("mason").setup({})
 require("mason-lspconfig").setup({
@@ -21,33 +19,40 @@ require("mason-lspconfig").setup({
 -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 
-require("java").setup()
+-- TODO: Fix this. This breaks on machine that isn't using java
+-- require("java").setup()
 
-lspconfig.jdtls.setup({
+vim.lsp.config("jdtls", {
     capabilities = capabilities,
 })
+vim.lsp.enable("jdtls")
 
-lspconfig.clangd.setup({
+vim.lsp.config("clangd", {
     capabilities = capabilities,
 })
+vim.lsp.enable("clangd")
 
-lspconfig.cssls.setup({
+vim.lsp.config("cssls", {
     capabilities = capabilities,
 })
+vim.lsp.enable("cssls")
 
-lspconfig.emmet_language_server.setup({
+vim.lsp.config("emmet_language_server", {
     capabilities = capabilities,
 })
+vim.lsp.enable("emmet_language_server")
 
-lspconfig.eslint.setup({
+vim.lsp.config("eslint", {
     capabilities = capabilities,
 })
+vim.lsp.enable("eslint")
 
-lspconfig.html.setup({
+vim.lsp.config("html", {
     capabilities = capabilities,
 })
+vim.lsp.enable("html")
 
-lspconfig.lua_ls.setup({
+vim.lsp.config("lua_ls", {
     capabilities = capabilities,
     settings = {
 
@@ -62,11 +67,14 @@ lspconfig.lua_ls.setup({
         },
     },
 })
+vim.lsp.enable("lua_ls")
 
-lspconfig.pyright.setup({
+vim.lsp.config("pyright", {
     capabilities = capabilities,
 })
+vim.lsp.enable("pyright")
 
-lspconfig.ts_ls.setup({
+vim.lsp.config("ts_ls", {
     capabilities = capabilities,
 })
+vim.lsp.enable("ts_ls")
