@@ -2,6 +2,7 @@
 require("mason").setup({})
 require("mason-lspconfig").setup({
     ensure_installed = {
+        "bashls",
         "clangd",
         "cssls",
         "emmet_language_server",
@@ -11,7 +12,7 @@ require("mason-lspconfig").setup({
         "pyright",
         "ts_ls",
     },
-    automatic_enable = false,
+    automatic_enable = true,
 })
 
 -- set up auto completion for each server (along with any other extra configuration)
@@ -22,35 +23,33 @@ local capabilities = require("blink.cmp").get_lsp_capabilities()
 -- TODO: Fix this. This breaks on machine that isn't using java
 -- require("java").setup()
 
+vim.lsp.config("bashls", {
+    capabilities = capabilities,
+})
+
 vim.lsp.config("jdtls", {
     capabilities = capabilities,
 })
-vim.lsp.enable("jdtls")
 
 vim.lsp.config("clangd", {
     capabilities = capabilities,
 })
-vim.lsp.enable("clangd")
 
 vim.lsp.config("cssls", {
     capabilities = capabilities,
 })
-vim.lsp.enable("cssls")
 
 vim.lsp.config("emmet_language_server", {
     capabilities = capabilities,
 })
-vim.lsp.enable("emmet_language_server")
 
 vim.lsp.config("eslint", {
     capabilities = capabilities,
 })
-vim.lsp.enable("eslint")
 
 vim.lsp.config("html", {
     capabilities = capabilities,
 })
-vim.lsp.enable("html")
 
 vim.lsp.config("lua_ls", {
     capabilities = capabilities,
@@ -67,14 +66,11 @@ vim.lsp.config("lua_ls", {
         },
     },
 })
-vim.lsp.enable("lua_ls")
 
 vim.lsp.config("pyright", {
     capabilities = capabilities,
 })
-vim.lsp.enable("pyright")
 
 vim.lsp.config("ts_ls", {
     capabilities = capabilities,
 })
-vim.lsp.enable("ts_ls")
