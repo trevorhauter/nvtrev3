@@ -15,6 +15,7 @@ return {
                 "dockerfile",
                 "gitcommit",
                 "gitignore",
+                "hcl",
                 "html",
                 "htmldjango",
                 "java",
