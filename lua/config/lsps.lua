@@ -10,6 +10,7 @@ require("mason-lspconfig").setup({
         "html",
         "lua_ls",
         "pyright",
+        "terraformls",
         "ts_ls",
     },
     automatic_enable = true,
@@ -68,6 +69,10 @@ vim.lsp.config("lua_ls", {
 })
 
 vim.lsp.config("pyright", {
+    capabilities = capabilities,
+})
+
+vim.lsp.config("terraformls", {
     capabilities = capabilities,
 })
 

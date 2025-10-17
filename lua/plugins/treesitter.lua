@@ -24,6 +24,7 @@ return {
                 "python",
                 "query",
                 "regex",
+                "terraform",
                 "toml",
                 "typescript",
                 "vim",
