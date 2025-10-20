@@ -7,6 +7,7 @@ require("mason-lspconfig").setup({
         "cssls",
         "emmet_language_server",
         "eslint",
+        "gh_actions_ls",
         "html",
         "lua_ls",
         "pyright",
@@ -45,6 +46,10 @@ vim.lsp.config("emmet_language_server", {
 })
 
 vim.lsp.config("eslint", {
+    capabilities = capabilities,
+})
+
+vim.lsp.config("gh_actions_ls", {
     capabilities = capabilities,
 })
 
