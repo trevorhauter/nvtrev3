@@ -13,7 +13,6 @@ A better way to code
 
 ### Habits
 - [hardtime](https://github.com/m4xshen/hardtime.nvim) - Build better habits in vim
-- [stand](https://github.com/mvllow/stand.nvim) - Reminders to stand & stretch
 
 ### LSP
 - [blink](https://github.com/saghen/blink.cmp) - Autocomplete
