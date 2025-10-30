@@ -85,7 +85,7 @@ local root_files = {
 
 vim.lsp.config("pyright", {
     capabilities = capabilities,
-    root_dir = vim.fs.root(vim.loop.cwd(), root_files),
+    root_dir = vim.fs.root(0, root_files),
 })
 
 vim.lsp.config("terraformls", {
