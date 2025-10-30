@@ -73,8 +73,19 @@ vim.lsp.config("lua_ls", {
     },
 })
 
+-- Copied from https://github.com/neovim/nvim-lspconfig/blob/c96ec574eacfff8ad8dd4bdb6e96a1b3dbd268fd/lua/lspconfig/server_configurations/pyright.lua#L10-L17
+local root_files = {
+    "pyrightconfig.json",
+    "pyproject.toml",
+    "setup.py",
+    "setup.cfg",
+    "requirements.txt",
+    "Pipfile",
+}
+
 vim.lsp.config("pyright", {
     capabilities = capabilities,
+    root_dir = vim.fs.root(vim.loop.cwd(), root_files),
 })
 
 vim.lsp.config("terraformls", {
