@@ -75,14 +75,6 @@ vim.lsp.config("lua_ls", {
 
 vim.lsp.config("pyright", {
     capabilities = capabilities,
-    root_markers = {
-        "pyrightconfig.json",
-        "pyproject.toml",
-        "setup.py",
-        "setup.cfg",
-        "requirements.txt",
-        "Pipfile",
-    },
 })
 
 vim.lsp.config("terraformls", {
