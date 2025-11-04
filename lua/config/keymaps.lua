@@ -4,4 +4,5 @@ vim.keymap.set(
     "<cmd> lua vim.diagnostic.open_float() <CR>",
     { desc = "View more detailed information of LSP diagnostic under cursor" }
 )
+vim.keymap.set("i", "<C-j>", "<cmd>e #<CR>", { desc = "Switch to previously edited file" })
 vim.keymap.set("n", "<C-j>", "<cmd>e #<CR>", { desc = "Switch to previously edited file" })
