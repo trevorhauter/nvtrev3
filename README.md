@@ -23,15 +23,15 @@ A better way to code
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - More LSP configuration
 
 ### Navigation
-- [eyeliner.nvim](https://github.com/jinh0/eyeliner.nvim) - Unique character highlighter
 - [dartboard](https://github.com/markgandolfo/dartboard.nvim) - Keep track and navigate back to common files
+- [eyeliner.nvim](https://github.com/jinh0/eyeliner.nvim) - Unique character highlighter
 - [leap](https://github.com/ggandor/leap.nvim) - Leap around files at lightning speed
 - [neoscroll](https://github.com/karb94/neoscroll.nvim) - Smooth scrolling
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) - File explorer
 - [snacks.picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md) - Fuzzy file finder
 
 ### Organization
-- [neorg](https://github.com/nvim-neorg/neorg) - Note taking and Organization
+- [neowiki](https://github.com/echaya/neowiki.nvim) - Note taking in markdown
 
 ### Random QoL
 - [mini.comment](https://github.com/echasnovski/mini.comment) - Commenting made easy
@@ -39,6 +39,7 @@ A better way to code
 - [nvim-lualine](https://github.com/nvim-lualine/lualine.nvim) - Status line
 - [nvim-spectre](https://github.com/nvim-pack/nvim-spectre) - Search and replace
 - [nvim-surround](https://github.com/kylechui/nvim-surround) - Quickly surround, remove, or change wrapping elements
+- [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) - Markdown rendering
 - [snacks.bigfile](https://github.com/folke/snacks.nvim/blob/main/docs/bigfile.md) - Deal with big files
 - [snacks.dashboard](https://github.com/folke/snacks.nvim/blob/main/docs/dashboard.md) - Beautiful declarative dashboards
 - [snacks.notifier](https://github.com/folke/snacks.nvim/blob/main/docs/notifier.md) - Pretty vim.notify
