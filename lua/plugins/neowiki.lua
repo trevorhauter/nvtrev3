@@ -3,7 +3,7 @@ return {
     opts = {
         wiki_dirs = {
             -- neowiki.nvim supports both absolute and tilde-expanded paths
-            { name = "work", path = "~/neowiki" },
+            { name = "wiki", path = "~/neowiki" },
         },
     },
     keys = {
