@@ -9,6 +9,7 @@ require("mason-lspconfig").setup({
         "eslint",
         "gh_actions_ls",
         "html",
+        "intelephense",
         "lua_ls",
         "pyright",
         "terraformls",
@@ -55,6 +56,10 @@ vim.lsp.config("gh_actions_ls", {
 })
 
 vim.lsp.config("html", {
+    capabilities = capabilities,
+})
+
+vim.lsp.config("intelephense", {
     capabilities = capabilities,
 })
 
