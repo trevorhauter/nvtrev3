@@ -28,6 +28,7 @@ return {
                 "python",
                 "query",
                 "regex",
+                "sql",
                 "terraform",
                 "toml",
                 "typescript",
