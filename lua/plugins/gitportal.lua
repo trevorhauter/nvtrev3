@@ -1,5 +1,5 @@
 return {
-    "trevorhauter/gitportal.nvim",
+    "https://codeberg.org/trevorhauter/gitportal.nvim",
     config = function()
         local gitportal = require("gitportal")
 
