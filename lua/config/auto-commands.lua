@@ -62,6 +62,15 @@ vim.api.nvim_create_autocmd("BufWritePost", {
     end,
 })
 
+vim.api.nvim_create_autocmd("BufWritePost", {
+    pattern = { "*.tf" },
+    group = "AutoFormat",
+    callback = function()
+        vim.cmd("silent! !terraform fmt %")
+        vim.cmd("edit")
+    end,
+})
+
 -- vim.api.nvim_create_autocmd("BufWritePost", {
 --     pattern = { "*.js", "*.ts", "*.tsx", "*.jsx" },
 --     group = "AutoFormat",
