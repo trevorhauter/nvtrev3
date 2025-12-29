@@ -73,7 +73,7 @@ vim.lsp.config("lua_ls", {
 
                 -- Get the language server to recognize the `vim` global
 
-                globals = { "vim" },
+                globals = { "before_each", "vim", "describe", "it" },
             },
         },
     },
