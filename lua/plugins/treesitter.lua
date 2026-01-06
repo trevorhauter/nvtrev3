@@ -39,15 +39,10 @@ return {
 
         -- For treesitter
         vim.api.nvim_create_autocmd("FileType", {
-            pattern = { "python", "terraform" },
-            callback = function()
-                -- syntax highlighting, provided by Neovim
-                vim.treesitter.start()
-                -- folds, provided by Neovim
-                vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-                vim.wo.foldmethod = "expr"
-                -- indentation, provided by nvim-treesitter
-                vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+            callback = function(args)
+                if vim.list_contains(treesitter.get_installed(), vim.treesitter.language.get_lang(args.match)) then
+                    vim.treesitter.start(args.buf)
+                end
             end,
         })
     end,
