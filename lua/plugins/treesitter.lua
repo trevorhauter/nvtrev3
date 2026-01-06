@@ -37,7 +37,7 @@ return {
             "yaml",
         })
 
-        -- For treesitter
+        -- auto-highlight files when opened
         vim.api.nvim_create_autocmd("FileType", {
             callback = function(args)
                 if vim.list_contains(treesitter.get_installed(), vim.treesitter.language.get_lang(args.match)) then
