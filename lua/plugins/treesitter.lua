@@ -1,14 +1,11 @@
--- inspired by https://www.lazyvim.org/plugins/treesitter
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     lazy = false,
-    opts = {
-        -- LazyVim config for treesitter
-        indent = { enable = true },
-        highlight = { enable = true },
-        folds = { enable = true },
-        ensure_installed = {
+    config = function()
+        local treesitter = require("nvim-treesitter")
+
+        treesitter.install({
             "bash",
             "c",
             "c_sharp",
@@ -38,6 +35,6 @@ return {
             "vim",
             "vimdoc",
             "yaml",
-        },
-    },
+        })
+    end,
 }
