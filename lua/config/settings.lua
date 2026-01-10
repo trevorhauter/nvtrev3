@@ -51,7 +51,7 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80,120"
+vim.opt.colorcolumn = "120"
 
 vim.o.splitbelow = true
 vim.o.splitright = true
