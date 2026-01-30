@@ -25,7 +25,6 @@ require("mason-lspconfig").setup({
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 -- TODO: Fix this. This breaks on machine that isn't using java
--- require("java").setup()
 
 vim.lsp.config("bashls", {
     capabilities = capabilities,
