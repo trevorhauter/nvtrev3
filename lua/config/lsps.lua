@@ -12,6 +12,7 @@ require("mason-lspconfig").setup({
         "intelephense",
         "lua_ls",
         "pyright",
+        "rust_analyzer",
         "terraformls",
         "tflint",
         "ts_ls",

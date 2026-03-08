@@ -28,6 +28,7 @@ return {
             "python",
             "query",
             "regex",
+            "rust",
             "sql",
             "terraform",
             "toml",
