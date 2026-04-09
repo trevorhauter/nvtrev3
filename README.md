@@ -18,8 +18,6 @@ A better way to code
 - [blink](https://github.com/saghen/blink.cmp) - Autocomplete
 - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim) - Configure LSP
 - [mason](https://github.com/williamboman/mason.nvim") - Automatically handles language server installations
-- [nvim-cmp-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) - Auto completion engine
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - More autocomplete
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - More LSP configuration
 
 ### Navigation

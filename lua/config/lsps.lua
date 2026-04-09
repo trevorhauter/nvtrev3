@@ -22,7 +22,6 @@ require("mason-lspconfig").setup({
 
 -- set up auto completion for each server (along with any other extra configuration)
 
--- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 -- TODO: Fix this. This breaks on machine that isn't using java
