@@ -82,6 +82,10 @@ vim.lsp.config("pyright", {
     capabilities = capabilities,
 })
 
+vim.lsp.config("rust_analyzer", {
+    capabilities = capabilities,
+})
+
 vim.lsp.config("terraformls", {
     capabilities = capabilities,
 })
