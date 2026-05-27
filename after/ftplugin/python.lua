@@ -7,3 +7,13 @@ end
 
 -- Django mapping to run tests easily in visual mode
 vim.keymap.set("v", "<cr><cr>", get_visual_selection)
+
+-- Autoformat with black on save
+vim.api.nvim_create_autocmd("BufWritePost", {
+    pattern = "*.py",
+    group = "AutoFormat",
+    callback = function()
+        vim.cmd("silent !black --quiet %")
+        vim.cmd("edit")
+    end,
+})
