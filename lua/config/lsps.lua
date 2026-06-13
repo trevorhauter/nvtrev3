@@ -16,6 +16,7 @@ require("mason-lspconfig").setup({
         "terraformls",
         "tflint",
         "ts_ls",
+        "zls",
     },
     automatic_enable = true,
 })
@@ -95,5 +96,9 @@ vim.lsp.config("tflint", {
 })
 
 vim.lsp.config("ts_ls", {
+    capabilities = capabilities,
+})
+
+vim.lsp.config("zls", {
     capabilities = capabilities,
 })
