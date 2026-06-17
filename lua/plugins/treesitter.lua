@@ -36,6 +36,7 @@ return {
             "vim",
             "vimdoc",
             "yaml",
+            "zig",
         })
 
         -- auto-highlight files when opened
