@@ -43,16 +43,6 @@ vim.api.nvim_create_autocmd("BufWritePost", {
         vim.cmd("edit")
     end,
 })
-
-vim.api.nvim_create_autocmd("BufWritePost", {
-    pattern = { "*.tf" },
-    group = "AutoFormat",
-    callback = function()
-        vim.cmd("silent! !terraform fmt %")
-        vim.cmd("edit")
-    end,
-})
-
 -- END AUTO FORMATTING STUFF
 
 -- SPECIAL KEY MAPS

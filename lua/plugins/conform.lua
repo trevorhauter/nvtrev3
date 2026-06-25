@@ -7,6 +7,7 @@ return {
                 lua = { "stylua" },
                 -- Conform will run multiple formatters sequentially
                 python = { "isort", "black" },
+                terraform = { "terraform_fmt" },
             },
         })
 
