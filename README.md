@@ -49,6 +49,7 @@ A better way to code
 - [snacks.words](https://github.com/folke/snacks.nvim/blob/main/docs/words.md) - Auto-show LSP references and quickly navigate between them
 - [snacks.zen](https://github.com/folke/snacks.nvim/blob/main/docs/zen.md) - Distraction free coding
 - [toggle-term](https://github.com/akinsho/toggleterm.nvim) - Floating terminal inside neovim
+- [zeal.nvim](https://github.com/paradoxical-dev/zeal.nvim) - Offline docs in Neovim!
 
 ### Syntax highlighting
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Syntax highlighting for all languages
