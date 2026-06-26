@@ -7,6 +7,9 @@ A better way to code
 
 ## Plugins
 
+### Formatting
+- [conform.nvim](https://github.com/stevearc/conform.nvim) - Autoformat files on save
+
 ### Git
 - [gitportal](https://github.com/trevorhauter/gitportal.nvim) - Jump between github & neovim FAST!
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim) - Git integration
